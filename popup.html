@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extração de Emails</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      width: 300px;
+      padding: 20px;
+    }
+    h2 {
+      color: #ff6600;
+      text-align: center;
+    }
+    button {
+      background-color: #ff6600;
+      color: #000;
+      border: none;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      width: 100%;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #ff8c33;
+    }
+    #extract {
+      margin-top: 20px;
+    }
+    #format-buttons {
+      display: none; /* Inicialmente escondido */
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .format-btn {
+      width: 45%;
+      font-size: 12px;
+    }
+    #progress-bar-container {
+      background-color: #444;
+      border-radius: 5px;
+      height: 20px;
+      margin: 20px 0;
+    }
+    #progress-bar {
+      background-color: #ff6600;
+      height: 100%;
+      width: 0%;
+      border-radius: 5px;
+      transition: width 0.4s ease;
+    }
+    #status {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Extração de Emails</h2>
+  <button id="extract">Iniciar Extração</button>
+  <div id="progress-bar-container">
+    <div id="progress-bar"></div>
+  </div>
+  <div id="format-buttons">
+    <button id="csv" class="format-btn">CSV</button>
+    <button id="excel" class="format-btn">Excel</button>
+  </div>
+  <div id="status">Pronto para extrair emails.</div>
+  <script src="popup.js"></script>
+</body>
+</html>
